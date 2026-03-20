@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>سياسة الخصوصية — SolarTrust</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy:   #0F2B5B;
+      --navy2:  #1A3A6B;
+      --gold:   #F59E0B;
+      --teal:   #0D9488;
+      --tealL:  #F0FDFA;
+      --bg:     #F8FAFC;
+      --card:   #FFFFFF;
+      --txt:    #1E293B;
+      --sub:    #64748B;
+      --border: #E2E8F0;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: var(--bg);
+      color: var(--txt);
+      line-height: 1.8;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 100%);
+      padding: 60px 20px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .logo-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .logo-icon {
+      width: 52px; height: 52px;
+      background: var(--gold);
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px;
+      box-shadow: 0 8px 24px rgba(245,158,11,0.4);
+    }
+    .logo-text {
+      font-size: 28px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.5px;
+    }
+    header h1 {
+      font-size: 22px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.90);
+      margin-bottom: 8px;
+    }
+    header .date {
+      font-size: 13px;
+      color: rgba(255,255,255,0.55);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* ── Banner ── */
+    .banner {
+      background: var(--tealL);
+      border-bottom: 2px solid var(--teal);
+      padding: 14px 20px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--teal);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    /* ── Main ── */
+    main {
+      max-width: 780px;
+      margin: 40px auto;
+      padding: 0 20px 80px;
+    }
+
+    /* ── TOC ── */
+    .toc {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-bottom: 36px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    }
+    .toc-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--sub);
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .toc ol {
+      padding-right: 20px;
+    }
+    .toc li {
+      margin-bottom: 6px;
+    }
+    .toc a {
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .toc a:hover { color: var(--teal); }
+
+    /* ── Section ── */
+    .section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+      transition: box-shadow 0.2s;
+    }
+    .section:hover {
+      box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-num {
+      width: 36px; height: 36px;
+      background: linear-gradient(135deg, var(--navy), var(--navy2));
+      color: #fff;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .section h2 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .section ul {
+      padding-right: 0;
+      list-style: none;
+    }
+    .section ul li {
+      font-size: 14px;
+      color: var(--txt);
+      padding: 7px 0;
+      border-bottom: 1px dashed var(--border);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .section ul li:last-child { border-bottom: none; }
+    .section ul li::before {
+      content: '✦';
+      color: var(--teal);
+      font-size: 10px;
+      margin-top: 5px;
+      flex-shrink: 0;
+    }
+
+    /* ── Highlight box ── */
+    .highlight {
+      background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+      border: 1px solid var(--gold);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #92400E;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .highlight-icon { font-size: 18px; flex-shrink: 0; }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 100%);
+      border-radius: 20px;
+      padding: 32px;
+      text-align: center;
+      color: #fff;
+      margin-top: 36px;
+    }
+    .contact-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .contact-card p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 24px;
+    }
+    .contact-btns {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-family: 'Cairo', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+    .btn-whatsapp { background: #25D366; color: #fff; }
+    .btn-email    { background: rgba(255,255,255,0.15); color: #fff; border: 1px solid rgba(255,255,255,0.3); }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 12px;
+      color: var(--sub);
+      border-top: 1px solid var(--border);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      header { padding: 40px 16px 36px; }
+      .logo-text { font-size: 22px; }
+      .section { padding: 20px 18px; }
+      .toc { padding: 18px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo-wrap">
+      <div class="logo-icon">☀️</div>
+      <span class="logo-text">SolarTrust</span>
+    </div>
+    <h1>سياسة الخصوصية</h1>
+    <p class="date">📅 آخر تحديث: مارس 2026</p>
+  </header>
+
+  <!-- Banner -->
+  <div class="banner">
+    🇮🇶 &nbsp; نحن ملتزمون بحماية خصوصيتك — لا نبيع بياناتك لأي طرف ثالث أبداً
+  </div>
+
+  <main>
+
+    <!-- Notice -->
+    <div class="highlight">
+      <span class="highlight-icon">⚠️</span>
+      <span>
+        هذه السياسة تنطبق على تطبيق <strong>SolarTrust</strong> للهواتف الذكية.
+        باستخدامك للتطبيق، فأنت توافق على شروط هذه السياسة.
+      </span>
+    </div>
+
+    <!-- TOC -->
+    <div class="toc">
+      <div class="toc-title">📋 المحتويات</div>
+      <ol>
+        <li><a href="#s1">البيانات التي نجمعها</a></li>
+        <li><a href="#s2">كيف نستخدم بياناتك</a></li>
+        <li><a href="#s3">تخزين البيانات</a></li>
+        <li><a href="#s4">مشاركة البيانات</a></li>
+        <li><a href="#s5">حقوقك</a></li>
+        <li><a href="#s6">الأمان</a></li>
+        <li><a href="#s7">التغييرات على هذه السياسة</a></li>
+        <li><a href="#s8">التواصل معنا</a></li>
+      </ol>
+    </div>
+
+    <!-- Section 1 -->
+    <div class="section" id="s1">
+      <div class="section-header">
+        <div class="section-num">1</div>
+        <h2>البيانات التي نجمعها</h2>
+      </div>
+      <ul>
+        <li>البريد الإلكتروني أو رقم الهاتف (لتسجيل الدخول عبر OTP)</li>
+        <li>الاسم والمحافظة (اختياري — لتخصيص النتائج)</li>
+        <li>عدد الأمبير المطلوب (لتوصيات الحاسبة)</li>
+        <li>تاريخ محادثات AI (مخزن محلياً على جهازك فقط)</li>
+        <li>بيانات الاستخدام العامة (الشاشات التي تزورها) لتحسين التطبيق</li>
+      </ul>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section" id="s2">
+      <div class="section-header">
+        <div class="section-num">2</div>
+        <h2>كيف نستخدم بياناتك</h2>
+      </div>
+      <ul>
+        <li>تخصيص نتائج البحث عن الموردين حسب محافظتك</li>
+        <li>تحسين توصيات الحاسبة الشمسية</li>
+        <li>إرسال إشعارات تغيير الأسعار (إذا فعّلتها)</li>
+        <li>تحليل أنماط الاستخدام لتحسين تجربة التطبيق</li>
+        <li>نحن لا نبيع بياناتك لأي طرف ثالث أبداً</li>
+      </ul>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section" id="s3">
+      <div class="section-header">
+        <div class="section-num">3</div>
+        <h2>تخزين البيانات</h2>
+      </div>
+      <ul>
+        <li>بياناتك مخزنة على خوادم Supabase المحمية بـ SSL/TLS</li>
+        <li>الموقع الجغرافي للخوادم: الاتحاد الأوروبي (Frankfurt)</li>
+        <li>تاريخ محادثات AI مخزن محلياً على جهازك فقط</li>
+        <li>يمكنك حذف حسابك وجميع بياناتك في أي وقت من الإعدادات</li>
+      </ul>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section" id="s4">
+      <div class="section-header">
+        <div class="section-num">4</div>
+        <h2>مشاركة البيانات</h2>
+      </div>
+      <ul>
+        <li>لا نشارك بياناتك مع أي طرف ثالث للأغراض التجارية أو التسويقية</li>
+        <li>نشارك البيانات فقط مع Supabase (قاعدة البيانات) بموجب اتفاقية معالجة البيانات</li>
+        <li>أسئلتك لمساعد AI تُرسل إلى Google Gemini بدون أي بيانات شخصية تعريفية</li>
+        <li>قد نُفصح عن البيانات إذا طُلب بموجب القانون النافذ</li>
+      </ul>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="section" id="s5">
+      <div class="section-header">
+        <div class="section-num">5</div>
+        <h2>حقوقك</h2>
+      </div>
+      <ul>
+        <li>الحق في الاطلاع على بياناتك الشخصية في أي وقت</li>
+        <li>الحق في تصحيح أي بيانات غير دقيقة</li>
+        <li>الحق في حذف حسابك وجميع بياناتك المرتبطة به</li>
+        <li>الحق في الاعتراض على معالجة بياناتك</li>
+        <li>لممارسة هذه الحقوق: الإعدادات ← "حذف الحساب" أو تواصل معنا مباشرة</li>
+      </ul>
+    </div>
+
+    <!-- Section 6 -->
+    <div class="section" id="s6">
+      <div class="section-header">
+        <div class="section-num">6</div>
+        <h2>الأمان</h2>
+      </div>
+      <ul>
+        <li>تشفير SSL/TLS لجميع الاتصالات بين التطبيق والخادم</li>
+        <li>نظام Row Level Security (RLS) يمنع الوصول غير المصرح به للبيانات</li>
+        <li>مصادقة OTP آمنة — لا كلمات مرور مخزنة نهائياً</li>
+        <li>نظام Rate Limiting للحماية من هجمات التخمين والإساءة</li>
+        <li>مراجعة أمنية دورية للكود وقاعدة البيانات</li>
+      </ul>
+    </div>
+
+    <!-- Section 7 -->
+    <div class="section" id="s7">
+      <div class="section-header">
+        <div class="section-num">7</div>
+        <h2>التغييرات على هذه السياسة</h2>
+      </div>
+      <ul>
+        <li>قد نحدّث هذه السياسة من وقت لآخر لتعكس تحسينات التطبيق</li>
+        <li>سنخطرك بأي تغييرات جوهرية عبر إشعار داخل التطبيق</li>
+        <li>تاريخ "آخر تحديث" في أعلى الصفحة يعكس آخر مراجعة</li>
+        <li>الاستمرار في استخدام التطبيق بعد نشر التحديث يُعدّ موافقة ضمنية</li>
+      </ul>
+    </div>
+
+    <!-- Section 8 -->
+    <div class="section" id="s8">
+      <div class="section-header">
+        <div class="section-num">8</div>
+        <h2>التواصل معنا</h2>
+      </div>
+      <ul>
+        <li>إذا كانت لديك أي أسئلة حول هذه السياسة، لا تتردد في التواصل معنا</li>
+        <li>سنرد على استفساراتك خلال 48 ساعة عمل</li>
+      </ul>
+    </div>
+
+    <!-- Contact Card -->
+    <div class="contact-card">
+      <h3>تواصل مع فريق SolarTrust</h3>
+      <p>نحن هنا للإجابة على أي استفسار حول خصوصيتك وبياناتك</p>
+      <div class="contact-btns">
+        <a href="https://wa.me/9647800000000" class="btn btn-whatsapp">
+          📱 واتساب
+        </a>
+        <a href="mailto:support@solartrust.iq" class="btn btn-email">
+          ✉️ support@solartrust.iq
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    © 2026 SolarTrust — جميع الحقوق محفوظة &nbsp;|&nbsp; العراق 🇮🇶
+  </footer>
+
+</body>
+</html>
